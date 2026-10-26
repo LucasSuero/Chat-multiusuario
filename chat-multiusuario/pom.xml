@@ -13,6 +13,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Testes com a tag "integracao" (sockets reais) ficam fora do "mvn test" comum.
+             Para incluí-los: mvn test -Dtestes.excluidos=nenhum -->
+        <testes.excluidos>integracao</testes.excluidos>
     </properties>
 
 
@@ -39,6 +42,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
+                <configuration>
+                    <excludedGroups>${testes.excluidos}</excludedGroups>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

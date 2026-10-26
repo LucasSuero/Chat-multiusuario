@@ -17,7 +17,7 @@ import java.util.List;
  * conexão, então vários clientes podem usar o repositório ao mesmo tempo sem
  * dividir estado entre as threads.
  */
-public class MensagemRepository {
+public class MensagemRepository implements RepositorioMensagens {
 
     private static final String SQL_INSERIR =
             "INSERT INTO mensagens (remetente, conteudo, horario) VALUES (?, ?, ?)";
@@ -32,6 +32,7 @@ public class MensagemRepository {
         this.configuracao = configuracao;
     }
 
+    @Override
     public void salvar(Mensagem mensagem) {
         try (Connection conexao = abrirConexao();
              PreparedStatement comando = conexao.prepareStatement(SQL_INSERIR)) {
@@ -45,6 +46,7 @@ public class MensagemRepository {
     }
 
     /** Devolve até {@code quantidade} mensagens, da mais antiga para a mais recente. */
+    @Override
     public List<Mensagem> buscarUltimas(int quantidade) {
         if (quantidade <= 0) {
             throw new IllegalArgumentException("A quantidade deve ser maior que zero.");

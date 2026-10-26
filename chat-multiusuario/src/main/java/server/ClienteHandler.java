@@ -16,14 +16,14 @@ import java.util.function.Consumer;
 
 /**
  * Atende uma única conexão de cliente, em sua própria thread: lê as linhas que o
- * cliente envia e as repassa ao {@link GerenciadorClientes} para o broadcast.
+ * cliente envia e as repassa ao {@link ServicoChat} (que grava no banco e faz o broadcast).
  */
 public class ClienteHandler implements Runnable, Destinatario {
 
     private static final int TEMPO_MAXIMO_IDENTIFICACAO_MS = 30_000;
 
     private final Socket socket;
-    private final GerenciadorClientes gerenciador;
+    private final ServicoChat servico;
     private final Consumer<String> log;
     private final BufferedReader entrada;
     private final PrintWriter saida;
@@ -32,10 +32,10 @@ public class ClienteHandler implements Runnable, Destinatario {
     private volatile String nome = "?";
     private volatile boolean registrado = false;
 
-    public ClienteHandler(Socket socket, GerenciadorClientes gerenciador, Consumer<String> log)
+    public ClienteHandler(Socket socket, ServicoChat servico, Consumer<String> log)
             throws IOException {
         this.socket = socket;
-        this.gerenciador = gerenciador;
+        this.servico = servico;
         this.log = log;
         this.entrada = new BufferedReader(
                 new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
@@ -50,8 +50,8 @@ public class ClienteHandler implements Runnable, Destinatario {
             if (!identificar()) {
                 return;
             }
-            gerenciador.broadcast(Mensagem.doSistema(nome + " entrou no chat.").formatar());
-            log.accept(nome + " entrou (" + gerenciador.quantidade() + " conectado(s)).");
+            servico.anunciar(nome + " entrou no chat.");
+            log.accept(nome + " entrou (" + servico.quantidade() + " conectado(s)).");
 
             String linha;
             while ((linha = entrada.readLine()) != null) {
@@ -80,7 +80,7 @@ public class ClienteHandler implements Runnable, Destinatario {
             return false;
         }
         nome = usuario.getNome();
-        if (!gerenciador.registrar(this)) {
+        if (!servico.entrar(this)) {
             recusar("O nome \"" + nome + "\" já está em uso.");
             return false;
         }
@@ -93,8 +93,7 @@ public class ClienteHandler implements Runnable, Destinatario {
             return;
         }
         try {
-            Mensagem mensagem = Mensagem.nova(nome, linha);
-            gerenciador.broadcast(mensagem.formatar());
+            servico.enviarMensagem(nome, linha);
         } catch (IllegalArgumentException e) {
             // Mensagem inválida (ex.: grande demais): só quem enviou fica sabendo.
             enviar(Mensagem.doSistema(e.getMessage()).formatar());
@@ -108,9 +107,9 @@ public class ClienteHandler implements Runnable, Destinatario {
 
     private void encerrar() {
         if (registrado) {
-            gerenciador.remover(this);
-            gerenciador.broadcast(Mensagem.doSistema(nome + " saiu do chat.").formatar());
-            log.accept(nome + " saiu (" + gerenciador.quantidade() + " conectado(s)).");
+            servico.sair(this);
+            servico.anunciar(nome + " saiu do chat.");
+            log.accept(nome + " saiu (" + servico.quantidade() + " conectado(s)).");
             registrado = false;
         }
         fechar();
