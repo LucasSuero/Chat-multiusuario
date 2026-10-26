@@ -1,0 +1,17 @@
+client/ClienteChat$Ouvinte.class
+server/ClienteHandler.class
+model/Usuario.class
+model/Mensagem.class
+client/JanelaChat.class
+model/Protocolo.class
+client/ClienteChat.class
+persistence/MensagemRepository.class
+server/Destinatario.class
+client/JanelaChat$2.class
+persistence/ConfiguracaoBanco.class
+server/JanelaServidor$1.class
+client/JanelaChat$1.class
+server/GerenciadorClientes.class
+server/JanelaServidor.class
+persistence/RepositorioException.class
+server/Servidor.class

@@ -1,0 +1,13 @@
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/client/ClienteChat.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/client/JanelaChat.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/model/Mensagem.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/model/Protocolo.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/model/Usuario.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/persistence/ConfiguracaoBanco.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/persistence/MensagemRepository.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/persistence/RepositorioException.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/server/ClienteHandler.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/server/Destinatario.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/server/GerenciadorClientes.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/server/JanelaServidor.java
+/home/leonardo/Downloads/Chat-multiusuario-main/chat-multiusuario/src/main/java/server/Servidor.java
