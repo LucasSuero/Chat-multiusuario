@@ -70,6 +70,7 @@ public class Servidor {
             } catch (IOException e) {
                 if (!escuta.isClosed()) {
                     log.accept("Erro ao aceitar conexão: " + e.getMessage());
+                    pausar(200); // evita um laço rápido se o erro se repetir
                 }
                 continue;
             }
@@ -87,6 +88,14 @@ public class Servidor {
                     // nada a fazer
                 }
             }
+        }
+    }
+
+    private static void pausar(long milissegundos) {
+        try {
+            Thread.sleep(milissegundos);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 

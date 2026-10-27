@@ -10,6 +10,8 @@ import persistence.RepositorioMensagens;
 import server.Servidor;
 
 import java.io.IOException;
+import java.io.OutputStream;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -123,6 +125,43 @@ class ChatIntegracaoTest {
         esperar(() -> cb.viu("Bia: ainda estou aqui"));
         assertTrue(servidor.estaRodando());
         conectar("Duda", new Coletor()); // o servidor continua aceitando gente nova
+    }
+
+    @Test
+    void clienteQueParouDeLerEhDesconectadoSemTravarOsOutros() throws Exception {
+        servidor.iniciar(0);
+        Socket mudo = new Socket("localhost", servidor.getPorta()); // entra e nunca mais lê
+        mudo.getOutputStream().write("Mudo\n".getBytes());
+        mudo.getOutputStream().flush();
+        Coletor ca = new Coletor();
+        ClienteChat ana = conectar("Ana", ca);
+        esperar(() -> servidor.getQuantidadeClientes() == 2);
+
+        String texto = "x".repeat(480);
+        for (int i = 0; i < 12_000 && servidor.getQuantidadeClientes() == 2; i++) {
+            ana.enviar(texto);
+        }
+
+        esperar(() -> servidor.getQuantidadeClientes() == 1); // o cliente parado foi removido
+        ana.enviar("continuo aqui");
+        esperar(() -> ca.viu("Ana: continuo aqui")); // e o chat segue funcionando
+        mudo.close();
+    }
+
+    @Test
+    void linhaGigantesEhRecusadaSemDerrubarOServidor() throws Exception {
+        servidor.iniciar(0);
+        Coletor ca = new Coletor();
+        conectar("Ana", ca);
+        try (Socket bruto = new Socket("localhost", servidor.getPorta())) {
+            OutputStream saida = bruto.getOutputStream();
+            saida.write("Bia\n".getBytes());
+            saida.write(("y".repeat(300_000) + "\n").getBytes());
+            saida.flush();
+            esperar(() -> ca.viu("Bia entrou"));
+        }
+        esperar(() -> servidor.getQuantidadeClientes() == 1);
+        assertTrue(servidor.estaRodando());
     }
 
     @Test

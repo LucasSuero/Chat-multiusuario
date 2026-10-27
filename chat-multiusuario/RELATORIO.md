@@ -32,8 +32,11 @@ falsos, sem rede e sem banco. Em relação à estrutura sugerida, a lista de cli
 - **Lista compartilhada.** Todo acesso à lista de clientes (registrar, remover, broadcast,
   contar) acontece dentro de `synchronized (trava)` em `GerenciadorClientes`, evitando condições
   de corrida. O registro verifica nome repetido e adiciona na mesma região protegida.
-- **Escrita em cada socket.** Cada `ClienteHandler` tem sua própria trava de escrita, para que duas
-  mensagens não se misturem no mesmo fluxo.
+- **Escrita em cada socket.** O envio a um cliente é assíncrono: `ClienteHandler.enviar()` só coloca o
+  texto numa fila (1000 itens) e uma thread de escrita própria grava no socket, na ordem. Assim o
+  broadcast, que roda com a lista travada, não fica preso a um socket lento. Se a fila de um cliente
+  continua cheia por mais de 1 s (ele parou de ler), ele é removido e desconectado; o atraso máximo
+  para os demais é esse 1 s, uma única vez.
 - **Ordem e histórico consistentes.** `ServicoChat` usa uma trava (`ordem`) em torno de
   "criar a mensagem (horário) + gravar + transmitir" e de "registrar o cliente + enviar o
   histórico". Consequências: a ordem gravada no banco é igual à ordem entregue, e um cliente
@@ -51,8 +54,8 @@ falsos, sem rede e sem banco. Em relação à estrutura sugerida, a lista de cli
 - O histórico traz as últimas 50 mensagens (`ServicoChat.TAMANHO_HISTORICO`).
 - Gravar dentro da trava de ordem serializa as gravações: é simples e correto para este porte,
   mas um banco lento atrasa o chat todo. Um pool de conexões ou uma fila de gravação seria a evolução.
-- O broadcast escreve nos sockets dentro da trava da lista. Se um cliente parar de ler sem fechar a
-  conexão e o buffer TCP encher, a escrita pode bloquear os demais. Não foi tratado (exigiria fila
-  de saída por cliente); não foi reproduzido nos testes.
-- Linhas recebidas não têm tamanho máximo na leitura (o limite de 500 caracteres é validado depois).
+- Esse problema (cliente que para de ler travando o broadcast) foi reproduzido com sockets reais na
+  versão anterior e corrigido com a fila de saída; há teste de integração para ele.
+- A leitura de cada linha guarda no máximo 2000 caracteres (o excesso é descartado); mensagens acima
+  de 500 caracteres são recusadas pela validação de `Mensagem`.
 - Sem autenticação: o nome é apenas um apelido único por sessão.

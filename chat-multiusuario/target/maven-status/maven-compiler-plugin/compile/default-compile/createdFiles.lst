@@ -8,10 +8,12 @@ client/ClienteChat.class
 persistence/MensagemRepository.class
 server/Destinatario.class
 client/JanelaChat$2.class
+persistence/RepositorioMensagens.class
 persistence/ConfiguracaoBanco.class
 server/JanelaServidor$1.class
 client/JanelaChat$1.class
 server/GerenciadorClientes.class
 server/JanelaServidor.class
+server/ServicoChat.class
 persistence/RepositorioException.class
 server/Servidor.class

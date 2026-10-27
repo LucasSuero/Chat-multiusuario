@@ -42,7 +42,8 @@ mvn test -Dtestes.excluidos=nenhum        # inclui o teste de integração com s
 - `MensagemTest`, `UsuarioTest`: regras do modelo (formatação, validações).
 - `GerenciadorClientesTest`: broadcast e lista sincronizada, com clientes falsos, inclusive concorrência.
 - `ServicoChatTest`: gravação, histórico, falha de banco e ordem, com repositório e clientes falsos.
-- `integration.ChatIntegracaoTest`: três clientes reais, histórico, desconexão abrupta, nome repetido.
+- `integration.ChatIntegracaoTest`: três clientes reais, histórico, desconexão abrupta, cliente que
+  para de ler, linha gigante, nome repetido.
 
 O `MensagemRepository` (JDBC) não tem teste automatizado porque exige um MySQL rodando;
 valide-o com o roteiro acima.
