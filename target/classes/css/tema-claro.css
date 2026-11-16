@@ -1,0 +1,25 @@
+/* Tema claro: apenas as variáveis de cor. Os estilos ficam em app.css. */
+.root {
+    -fundo: #F3F4F9;
+    -superficie: #FFFFFF;
+    -superficie-alt: #F0F1F7;
+    -barra-lateral: #FFFFFF;
+    -borda: #E4E6EF;
+    -texto: #1C2033;
+    -texto-suave: #6B7185;
+    -primaria: #6C5CE7;
+    -primaria-hover: #5A4BD1;
+    -primaria-suave: #ECE9FF;
+    -balao-recebido: #FFFFFF;
+    -balao-enviado: #6C5CE7;
+    -texto-enviado: #FFFFFF;
+    -texto-enviado-suave: #DDD8FF;
+    -selecao: #ECE9FF;
+    -hover: #F4F3FB;
+    -perigo: #E5484D;
+    -sucesso: #12B76A;
+    -icone: #596078;
+    -sombra: rgba(28, 32, 51, 0.14);
+    -marca-1: #6C5CE7;
+    -marca-2: #A58BFF;
+}

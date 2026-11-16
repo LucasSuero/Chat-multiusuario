@@ -1,0 +1,25 @@
+/* Tema escuro: apenas as variáveis de cor. Os estilos ficam em app.css. */
+.root {
+    -fundo: #181A24;
+    -superficie: #232634;
+    -superficie-alt: #2B2F40;
+    -barra-lateral: #1F2230;
+    -borda: #353A50;
+    -texto: #ECEEF6;
+    -texto-suave: #9AA1BC;
+    -primaria: #7C6CFF;
+    -primaria-hover: #8E80FF;
+    -primaria-suave: #34305F;
+    -balao-recebido: #2D3144;
+    -balao-enviado: #6C5CE7;
+    -texto-enviado: #FFFFFF;
+    -texto-enviado-suave: #DAD5FF;
+    -selecao: #323657;
+    -hover: #2A2E44;
+    -perigo: #FF6B70;
+    -sucesso: #32D583;
+    -icone: #B4BAD3;
+    -sombra: rgba(0, 0, 0, 0.45);
+    -marca-1: #4B3FC4;
+    -marca-2: #8A6BFF;
+}
