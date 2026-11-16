@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="3.467" tests="12" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\anaee\Downloads\chat-multiusuario-intermediario\chat-multiusuario\target\test-classes;C:\Users\anaee\Downloads\chat-multiusuario-intermediario\chat-multiusuario\target\classes;C:\Users\anaee\.m2\repository\org\xerial\sqlite-jdbc\3.46.1.3\sqlite-jdbc-3.46.1.3.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-controls\21.0.5\javafx-controls-21.0.5.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-controls\21.0.5\javafx-controls-21.0.5-win.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-graphics\21.0.5\javafx-graphics-21.0.5.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-graphics\21.0.5\javafx-graphics-21.0.5-win.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-base\21.0.5\javafx-base-21.0.5.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-base\21.0.5\javafx-base-21.0.5-win.jar;C:\Users\anaee\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\anaee\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\anaee\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\anaee\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\anaee\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\anaee\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\anaee\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\anaee\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\anaee\AppData\Local\Temp\surefire1437004893674868100\surefirebooter-20261116201907779_3.jar C:\Users\anaee\AppData\Local\Temp\surefire1437004893674868100 2026-11-16T20-19-07_141-jvmRun1 surefire-20261116201907779_1tmp surefire_0-20261116201907779_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\anaee\Downloads\chat-multiusuario-intermediario\chat-multiusuario\target\test-classes;C:\Users\anaee\Downloads\chat-multiusuario-intermediario\chat-multiusuario\target\classes;C:\Users\anaee\.m2\repository\org\xerial\sqlite-jdbc\3.46.1.3\sqlite-jdbc-3.46.1.3.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-controls\21.0.5\javafx-controls-21.0.5.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-controls\21.0.5\javafx-controls-21.0.5-win.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-graphics\21.0.5\javafx-graphics-21.0.5.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-graphics\21.0.5\javafx-graphics-21.0.5-win.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-base\21.0.5\javafx-base-21.0.5.jar;C:\Users\anaee\.m2\repository\org\openjfx\javafx-base\21.0.5\javafx-base-21.0.5-win.jar;C:\Users\anaee\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\anaee\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\anaee\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\anaee\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\anaee\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\anaee\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\anaee\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\anaee\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\anaee"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-08-18"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\anaee\Downloads\chat-multiusuario-intermediario\chat-multiusuario"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\anaee\AppData\Local\Temp\surefire1437004893674868100\surefirebooter-20261116201907779_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.4.1+1-LTS"/>
+    <property name="user.name" value="anaee"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-25.0.4.1+1"/>
+    <property name="localRepository" value="C:\Users\anaee\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\anaee\AppData\Local\Temp\"/>
+    <property name="java.version" value="25.0.4.1"/>
+    <property name="user.dir" value="C:\Users\anaee\Downloads\chat-multiusuario-intermediario\chat-multiusuario"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\anaee\AppData\Local\Microsoft\WindowsApps;C:\Users\anaee\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\anaee\AppData\Local\GitHubDesktop\bin;C:\Users\anaee\AppData\Local\Python\bin;C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin;C:\Users\anaee\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;C:\Users\anaee\Downloads\apache-maven-3.10.0-bin\apache-maven-3.10.0\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="25.0.4.1+1-LTS"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="mensagensDeGrupoChegamATodosOsIntegrantes" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="1.259">
+    <system-err><![CDATA[nov. 16, 2026 8:19:08 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50029
+nov. 16, 2026 8:19:08 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50030
+nov. 16, 2026 8:19:08 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50031
+nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50032
+nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50033
+nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50032 (carla)
+nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50031 (bruno)
+nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50030 (ana)
+nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50033 (diego)
+]]></system-err>
+  </testcase>
+  <testcase name="sairNaoDisparaDesconexaoEEsquecePrivacidade" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.461">
+    <system-err><![CDATA[nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50034
+nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50035
+nov. 16, 2026 8:19:09 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50035 (ana)
+]]></system-err>
+  </testcase>
+  <testcase name="doisClientesConversamEmPrivadoESoOParticipanteRecebe" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.445">
+    <system-err><![CDATA[nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50036
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50037
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50038
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50039
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50037 (ana)
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50038 (bruno)
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50039 (carla)
+]]></system-err>
+  </testcase>
+  <testcase name="quedaDoServidorEhDetectadaEReconectarRestauraASessao" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.097">
+    <system-err><![CDATA[nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50041
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50042
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50042 (ana)
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50041
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50044
+]]></system-err>
+  </testcase>
+  <testcase name="loginInvalidoGeraErroEASessaoNaoAutentica" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.155">
+    <system-err><![CDATA[nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50044 (ana)
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50045
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50046
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50047
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50046 (ana)
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50047
+]]></system-err>
+  </testcase>
+  <testcase name="acentosEEmojisSaoPreservadosDeUmClienteAOutro" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.11">
+    <system-err><![CDATA[nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50048
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50049
+nov. 16, 2026 8:19:10 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50050
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50049 (ana)
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50050 (bruno)
+]]></system-err>
+  </testcase>
+  <testcase name="conectarEmPortaFechadaLancaIOException" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.008">
+    <system-err><![CDATA[nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50051
+]]></system-err>
+  </testcase>
+  <testcase name="salaGeralEhBroadcastEHistoricoChegaNoLoginSemPedirNada" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.201">
+    <system-err><![CDATA[nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50054
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50055
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50056
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50058
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50056 (bruno)
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50059
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50055 (ana)
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50059 (diego)
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50058 (carla)
+]]></system-err>
+  </testcase>
+  <testcase name="mensagemVaziaNaoVaiAoServidorEMuitoGrandeEhRecusadaNoCliente" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.404">
+    <system-err><![CDATA[nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50060
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50062
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50063
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50062 (ana)
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50063 (bruno)
+]]></system-err>
+  </testcase>
+  <testcase name="historicoVemDoServidorEhOrdenadoEnaoDuplica" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.161">
+    <system-err><![CDATA[nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50064
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50065
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50066
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50066 (bruno)
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50067
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50067 (bruno)
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50065 (ana)
+]]></system-err>
+  </testcase>
+  <testcase name="usuarioNaoPodeCriarGrupoComONomeReservadoGeral" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.051">
+    <system-err><![CDATA[nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50068
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50069
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50069 (ana)
+]]></system-err>
+  </testcase>
+  <testcase name="trocaDeAvatarEhGravadaEPermaneceAposSairEEntrarDeNovo" classname="br.unicesumar.chat.client.ClienteChatIntegracaoTest" time="0.101">
+    <system-err><![CDATA[nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.Servidor iniciar
+INFORMAÇÕES: Servidor ouvindo na porta 50070
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50071
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50071 (ana)
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente conectado: /127.0.0.1:50072
+nov. 16, 2026 8:19:11 PM br.unicesumar.chat.server.ClienteHandler run
+INFORMAÇÕES: Cliente desconectado: /127.0.0.1:50072 (ana)
+]]></system-err>
+  </testcase>
+</testsuite>

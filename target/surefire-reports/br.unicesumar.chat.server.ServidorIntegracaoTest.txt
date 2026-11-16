@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.unicesumar.chat.server.ServidorIntegracaoTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.305 s -- in br.unicesumar.chat.server.ServidorIntegracaoTest
