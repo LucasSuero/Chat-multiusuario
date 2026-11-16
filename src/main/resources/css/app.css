@@ -1,0 +1,203 @@
+/* ===== Base ===== */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", "Noto Sans", "System";
+    -fx-font-size: 14px;
+    -fx-background-color: -fundo;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-fill: -texto;
+}
+.label { -fx-text-fill: -texto; }
+.texto-suave { -fx-text-fill: -texto-suave; }
+.titulo-grande { -fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: -texto; }
+.subtitulo { -fx-font-size: 14px; -fx-text-fill: -texto-suave; }
+.rotulo-campo { -fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: -texto-suave; }
+.mensagem-erro { -fx-text-fill: -perigo; -fx-font-size: 13px; -fx-font-weight: bold; }
+.mensagem-sucesso { -fx-text-fill: -sucesso; -fx-font-size: 13px; -fx-font-weight: bold; }
+
+/* ===== Campos ===== */
+.text-field, .password-field {
+    -fx-background-color: -superficie-alt;
+    -fx-background-radius: 10;
+    -fx-border-color: -borda;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-text-fill: -texto;
+    -fx-prompt-text-fill: -texto-suave;
+    -fx-highlight-fill: -primaria;
+    -fx-highlight-text-fill: white;
+    -fx-padding: 10 14 10 14;
+}
+.text-field:focused, .password-field:focused { -fx-border-color: -primaria; }
+.text-area {
+    -fx-background-color: -superficie-alt;
+    -fx-control-inner-background: -superficie-alt;
+    -fx-background-radius: 16;
+    -fx-border-color: -borda;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-text-fill: -texto;
+    -fx-prompt-text-fill: -texto-suave;
+    -fx-highlight-fill: -primaria;
+    -fx-highlight-text-fill: white;
+}
+.text-area .content { -fx-background-color: -superficie-alt; -fx-background-radius: 16; -fx-padding: 8 14 8 14; }
+.text-area:focused { -fx-border-color: -primaria; }
+
+/* ===== Botões ===== */
+.button { -fx-cursor: hand; -fx-background-insets: 0; }
+.botao-primario {
+    -fx-background-color: -primaria;
+    -fx-background-radius: 12;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 11 22 11 22;
+}
+.botao-primario:hover { -fx-background-color: -primaria-hover; }
+.botao-primario:disabled { -fx-opacity: 0.55; }
+.botao-secundario {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-border-color: -borda;
+    -fx-border-radius: 12;
+    -fx-text-fill: -texto;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+}
+.botao-secundario:hover { -fx-background-color: -hover; }
+.botao-perigo {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-border-color: -perigo;
+    -fx-border-radius: 12;
+    -fx-text-fill: -perigo;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+}
+.botao-perigo:hover { -fx-background-color: -hover; }
+.botao-link { -fx-background-color: transparent; -fx-text-fill: -primaria; -fx-font-weight: bold; -fx-padding: 4 6 4 6; }
+.botao-link:hover { -fx-underline: true; }
+.botao-icone { -fx-background-color: transparent; -fx-background-radius: 10; -fx-padding: 8; }
+.botao-icone:hover { -fx-background-color: -hover; }
+.botao-enviar { -fx-background-color: -primaria; -fx-background-radius: 22; -fx-padding: 0; -fx-min-width: 44; -fx-min-height: 44; -fx-pref-width: 44; -fx-pref-height: 44; }
+.botao-enviar:hover { -fx-background-color: -primaria-hover; }
+.botao-enviar:disabled { -fx-opacity: 0.5; }
+.toggle-button.seletor-tema {
+    -fx-background-color: -superficie-alt;
+    -fx-background-radius: 10;
+    -fx-text-fill: -texto;
+    -fx-padding: 8 16 8 16;
+    -fx-font-weight: bold;
+}
+.toggle-button.seletor-tema:selected { -fx-background-color: -primaria; -fx-text-fill: white; }
+
+/* ===== Ícones (formas desenhadas em código) ===== */
+.icone-linha { -fx-fill: transparent; -fx-stroke: -icone; -fx-stroke-width: 1.8; -fx-stroke-line-cap: round; -fx-stroke-line-join: round; }
+.icone-solido { -fx-fill: -icone; -fx-stroke: transparent; }
+.botao-enviar .icone-solido { -fx-fill: white; }
+.icone-marca .icone-solido { -fx-fill: white; }
+.icone-suave .icone-linha { -fx-stroke: -texto-suave; }
+.icone-suave .icone-solido { -fx-fill: -texto-suave; }
+
+/* ===== Login ===== */
+.login-raiz { -fx-background-color: -fundo; }
+.painel-marca { -fx-background-color: linear-gradient(to bottom right, -marca-1, -marca-2); -fx-padding: 56; }
+.marca-titulo { -fx-font-size: 34px; -fx-font-weight: bold; -fx-text-fill: white; }
+.marca-texto { -fx-font-size: 16px; -fx-text-fill: rgba(255, 255, 255, 0.85); }
+.marca-ponto { -fx-font-size: 14px; -fx-text-fill: rgba(255, 255, 255, 0.92); }
+.cartao { -fx-background-color: -superficie; -fx-background-radius: 20; -fx-border-color: -borda; -fx-border-radius: 20; -fx-effect: dropshadow(gaussian, -sombra, 24, 0.05, 0, 8); }
+.painel-opcoes-servidor { -fx-background-color: -superficie-alt; -fx-background-radius: 12; -fx-padding: 12; }
+.avatar-opcao { -fx-background-radius: 40; -fx-border-color: transparent; -fx-border-width: 3; -fx-border-radius: 40; -fx-padding: 2; -fx-cursor: hand; }
+.avatar-opcao:hover { -fx-background-color: -hover; }
+.avatar-opcao-ativo { -fx-border-color: -primaria; }
+.avatar-opcao-grupo { -fx-background-radius: 16; -fx-border-radius: 16; }
+
+/* ===== Barra lateral ===== */
+.barra-lateral { -fx-background-color: -barra-lateral; -fx-border-color: transparent -borda transparent transparent; -fx-border-width: 0 1 0 0; }
+.topo-lateral { -fx-padding: 18 16 10 20; }
+.titulo-app { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: -texto; }
+.campo-busca { -fx-background-radius: 12; -fx-border-radius: 12; }
+.secao-titulo { -fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: -texto-suave; -fx-padding: 14 12 4 14; }
+.lista-conversas { -fx-background-color: transparent; -fx-background-insets: 0; -fx-padding: 0; }
+.lista-conversas .list-cell { -fx-background-color: transparent; -fx-padding: 1 8 1 8; -fx-text-fill: -texto; }
+.lista-conversas .list-cell:empty { -fx-background-color: transparent; }
+.item-conversa { -fx-background-radius: 12; -fx-padding: 8 10 8 10; }
+.item-conversa:hover { -fx-background-color: -hover; }
+.lista-conversas .list-cell:filled:selected .item-conversa { -fx-background-color: -selecao; }
+.titulo-item { -fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: -texto; }
+.previa-item { -fx-font-size: 12px; -fx-text-fill: -texto-suave; }
+.hora-item { -fx-font-size: 11px; -fx-text-fill: -texto-suave; }
+.badge { -fx-background-color: -primaria; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-padding: 1 7 1 7; }
+.painel-usuario { -fx-background-color: -superficie-alt; -fx-background-radius: 14; -fx-padding: 10; }
+.nome-usuario { -fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: -texto; }
+.estado-conexao { -fx-font-size: 12px; -fx-text-fill: -texto-suave; }
+.estado-conexao-ok { -fx-font-size: 12px; -fx-text-fill: -sucesso; }
+.estado-conexao-erro { -fx-font-size: 12px; -fx-text-fill: -perigo; }
+
+/* ===== Conversa ===== */
+.painel-conversa { -fx-background-color: -fundo; }
+.cabecalho-conversa { -fx-background-color: -superficie; -fx-border-color: transparent transparent -borda transparent; -fx-border-width: 0 0 1 0; -fx-padding: 12 20 12 20; }
+.titulo-conversa { -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: -texto; }
+.subtitulo-conversa { -fx-font-size: 12px; -fx-text-fill: -texto-suave; }
+.area-mensagens { -fx-background-color: -fundo; }
+.area-mensagens > .viewport { -fx-background-color: -fundo; }
+.lista-mensagens { -fx-background-color: -fundo; -fx-padding: 16 24 16 24; }
+.separador-dia { -fx-background-color: -superficie-alt; -fx-background-radius: 20; -fx-text-fill: -texto-suave; -fx-font-size: 11px; -fx-font-weight: bold; -fx-padding: 4 14 4 14; }
+.balao { -fx-padding: 8 14 10 14; }
+.balao-recebido { -fx-background-color: -balao-recebido; -fx-background-radius: 16 16 16 4; -fx-border-color: -borda; -fx-border-radius: 16 16 16 4; }
+.balao-enviado { -fx-background-color: -balao-enviado; -fx-background-radius: 16 16 4 16; }
+.balao-nome { -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: -primaria; }
+.balao-nome-enviado { -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: -texto-enviado; }
+.balao-hora { -fx-font-size: 11px; -fx-text-fill: -texto-suave; }
+.balao-hora-enviado { -fx-font-size: 11px; -fx-text-fill: -texto-enviado-suave; }
+.balao-texto { -fx-font-size: 14px; -fx-text-fill: -texto; }
+.balao-texto-enviado { -fx-font-size: 14px; -fx-text-fill: -texto-enviado; }
+.barra-entrada { -fx-background-color: -superficie; -fx-border-color: -borda transparent transparent transparent; -fx-border-width: 1 0 0 0; -fx-padding: 14 20 14 20; }
+.banner-offline { -fx-background-color: -perigo; -fx-padding: 8 20 8 20; }
+.banner-offline .label { -fx-text-fill: white; -fx-font-weight: bold; }
+.banner-offline .button { -fx-background-color: rgba(255, 255, 255, 0.22); -fx-text-fill: white; -fx-background-radius: 8; -fx-font-weight: bold; -fx-padding: 4 12 4 12; }
+.estado-vazio-titulo { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: -texto; }
+.estado-vazio-texto { -fx-font-size: 14px; -fx-text-fill: -texto-suave; }
+.circulo-vazio { -fx-background-color: -primaria-suave; -fx-background-radius: 60; }
+
+/* ===== Diálogos, menus e dicas ===== */
+.dialog-pane { -fx-background-color: -superficie; -fx-background-radius: 16; -fx-border-color: -borda; -fx-border-radius: 16; }
+.dialog-pane > .content { -fx-background-color: -superficie; }
+.dialog-pane > .button-bar > .container { -fx-background-color: -superficie; }
+.dialog-pane .label { -fx-text-fill: -texto; }
+.dialog-pane > .button-bar .button { -fx-background-color: -superficie-alt; -fx-background-radius: 10; -fx-text-fill: -texto; -fx-font-weight: bold; -fx-padding: 8 20 8 20; }
+.dialog-pane > .button-bar .button:hover { -fx-background-color: -hover; }
+.titulo-dialogo { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: -texto; }
+.lista-usuarios { -fx-background-color: transparent; -fx-background-insets: 0; -fx-padding: 0; }
+.lista-usuarios .list-cell { -fx-background-color: transparent; -fx-padding: 2 0 2 0; }
+.lista-usuarios .list-cell:empty { -fx-background-color: transparent; }
+.item-usuario { -fx-background-radius: 12; -fx-padding: 8 10 8 10; }
+.item-usuario:hover { -fx-background-color: -hover; }
+.chip { -fx-background-color: -primaria-suave; -fx-background-radius: 20; -fx-padding: 4 6 4 10; }
+.chip .label { -fx-text-fill: -primaria; -fx-font-weight: bold; -fx-font-size: 12px; }
+.context-menu { -fx-background-color: -superficie; -fx-background-radius: 12; -fx-border-color: -borda; -fx-border-radius: 12; -fx-padding: 6; }
+.context-menu .menu-item { -fx-background-radius: 8; -fx-padding: 8 14 8 14; }
+.context-menu .menu-item .label { -fx-text-fill: -texto; }
+.context-menu .menu-item:focused { -fx-background-color: -selecao; }
+.tooltip { -fx-background-color: -superficie-alt; -fx-text-fill: -texto; -fx-background-radius: 8; -fx-font-size: 12px; }
+.progress-indicator { -fx-progress-color: -primaria; }
+
+/* ===== Barras de rolagem discretas ===== */
+.scroll-pane { -fx-background-color: transparent; -fx-background-insets: 0; -fx-padding: 0; }
+.scroll-pane > .viewport { -fx-background-color: transparent; }
+.scroll-pane > .corner { -fx-background-color: transparent; }
+.scroll-bar { -fx-background-color: transparent; }
+.scroll-bar:vertical { -fx-pref-width: 10; }
+.scroll-bar:horizontal { -fx-pref-height: 10; }
+.scroll-bar .thumb { -fx-background-color: -borda; -fx-background-radius: 8; -fx-background-insets: 2; }
+.scroll-bar .track { -fx-background-color: transparent; }
+.scroll-bar .increment-button, .scroll-bar .decrement-button { -fx-background-color: transparent; -fx-padding: 0; }
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow { -fx-shape: " "; -fx-padding: 0; }
+
+/* ===== Avisos (toast) e detalhes extras ===== */
+.aviso { -fx-background-radius: 12; -fx-padding: 10 18 10 18; -fx-text-fill: white; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, -sombra, 18, 0.1, 0, 4); }
+.aviso-ok { -fx-background-color: -primaria; }
+.aviso-erro { -fx-background-color: -perigo; }
+.icone-primario .icone-solido { -fx-fill: -primaria; }
+.painel-marca .icone-linha { -fx-stroke: white; }
+.estado-vazio { -fx-background-color: -fundo; }
